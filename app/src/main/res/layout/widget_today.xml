@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_widget_card"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Top row: App Name & Greeting + Date -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/widget_greeting"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="一人居 · 下午好"
+            android:textColor="#98989E"
+            android:textSize="13sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/widget_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_widget_chip"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="4dp"
+            android:text="10月16日"
+            android:textColor="#0A84FF"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="8dp" />
+
+    <!-- Center row: 2 KPIs + Live Timer Pill -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- KPI: 今日已花 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="今日已花"
+                android:textColor="#FF9F0A"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/widget_spent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥186"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- KPI: 待办剩 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="待办剩"
+                android:textColor="#0A84FF"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/widget_pending_tasks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Live Activity Pill -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_widget_chip"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingHorizontal="10dp"
+            android:paddingVertical="6dp">
+
+            <TextView
+                android:id="@+id/widget_timer_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⏱ 流体云就绪"
+                android:textColor="#30D158"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Bottom: Next Step / Commute plan -->
+    <TextView
+        android:id="@+id/widget_next_step"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="▶ 下一步：听播客 / 有声书"
+        android:textColor="#D6D6DA"
+        android:textSize="12sp" />
+
+</LinearLayout>

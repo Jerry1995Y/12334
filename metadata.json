@@ -1,0 +1,6 @@
+{
+  "name": "一人居",
+  "description": "一人居 · 原生 Android 生活 OS：日常待办、记账预算、采购清单、通勤打卡流体云及健康睡眠管理",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
